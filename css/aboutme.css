@@ -11,8 +11,8 @@ body{
     text-align: center;
     font-size: 12px;
     position: relative;
-    margin-top: -30px;
-    padding: 4px;
+    margin: 0;
+    padding: 2px;
     clear: both;
     background-color: rgb(64, 64, 64);
     }
@@ -20,7 +20,7 @@ header {
     background: #02bbff;
     margin: 0px;
     padding: 0px;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    width: 100%;
 }
 header::after {
     content: '';
@@ -73,8 +73,9 @@ nav a:hover::before {
     width: 100%;
 }
 
-
 .container {
+    min-height: calc(100vh - 75px - 47px);
+    overflow: auto;
     width: 80%;
     display: grid;
     margin: 0px auto;
@@ -97,6 +98,7 @@ nav a:hover::before {
 #main1 { 
     grid-area: main1;
     background-color: rgb(64, 64, 64);
+    height: 750px;
 }
 #main1 h1{
     margin: 0.5rem;
