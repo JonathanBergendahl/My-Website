@@ -252,13 +252,15 @@ nav a:hover::before {
 
 
 
-@media only screen and (min-width:800px){
+@media only screen and (min-width: 1000px){
     .burgermenu{
         opacity: 0;
     }
 }
-@media only screen and (max-width:800px){
+@media only screen and (max-width: 1000px){
     .container{
+        min-height: calc(100% - 75px - 47px);
+        width: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
@@ -270,7 +272,7 @@ nav a:hover::before {
         "content5"
         "content6";
         margin: auto;
-        overflow: hidden;
+        overflow: auto;
     }
     .navbar { 
         margin: 0 auto;
