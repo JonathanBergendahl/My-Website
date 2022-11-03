@@ -11,8 +11,8 @@ body{
     text-align: center;
     font-size: 12px;
     position: relative;
-    margin-top: -30px;
-    padding: 4px;
+    margin: 0;
+    padding: 2px;
     clear: both;
     background-color: rgb(64, 64, 64);
     }
@@ -20,7 +20,7 @@ header {
     background: #02bbff;
     margin: 0px;
     padding: 0px;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    width: 100%;
 }
 header::after {
     content: '';
@@ -75,6 +75,8 @@ nav a:hover::before {
 
 
 .container {
+    min-height: calc(100vh - 75px - 47px);
+    overflow: auto;
     width: 80%;
     display: grid;
     margin: 0px auto;
@@ -250,13 +252,15 @@ nav a:hover::before {
 
 
 
-@media only screen and (min-width:800px){
+@media only screen and (min-width: 1000px){
     .burgermenu{
         opacity: 0;
     }
 }
-@media only screen and (max-width:800px){
+@media only screen and (max-width: 1000px){
     .container{
+        min-height: calc(100% - 75px - 47px);
+        width: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
@@ -268,7 +272,7 @@ nav a:hover::before {
         "content5"
         "content6";
         margin: auto;
-        overflow: hidden;
+        overflow: auto;
     }
     .navbar { 
         margin: 0 auto;

@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body{
     margin: 0;
-    padding: 0;
     background: #222;
     font-family: 'Work Sans', sans-serif;
     font-weight: 800;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
-.MainFooter{
-    
+.MainFooter{  
     text-align: center;
     font-size: 12px;
     position: relative;
+    margin: 0;
     padding: 2px;
-    margin-bottom: 0;
     clear: both;
     background-color: rgb(64, 64, 64);
     }
@@ -32,7 +30,7 @@ header::after {
 .navbar { 
     width: 80%;
     margin: 0 auto;
-    padding: 0;
+    color: rgb(255, 255, 255);
 }
 .logo {
     float: left;
@@ -53,13 +51,13 @@ nav li {
     position: relative;
 }
 nav a {
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
 }
 nav a:hover {
-    color: rgb(230, 230, 230);
+    color: rgb(255, 255, 255);
 }
 nav a::before {
     content: '';
@@ -107,7 +105,7 @@ nav a:hover::before {
     position: relative;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,12 +169,12 @@ nav a:hover::before {
 }
 .burgermenu .menu > div > div > ul > li {
     list-style: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     padding: 1rem;
 }
 .burgermenu .menu > div > div > ul > li > a{
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -221,20 +219,21 @@ nav a:hover::before {
     "main1 main1 content1";
     grid-gap: 0.3rem;
 }
-@media only screen and (min-width:800px){
+@media only screen and (min-width: 1000px){
     .burgermenu{
         opacity: 0;
     }
 }
-@media only screen and (max-width:800px){
-    .container {
+@media only screen and (max-width: 1000px){
+    .container{
+        min-height: calc(100% - 75px - 47px);
         width: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
         "main1";
         margin: auto;
-        overflow: visible;
+        overflow: auto;
     }
     .navbar { 
         margin: 0 auto;
